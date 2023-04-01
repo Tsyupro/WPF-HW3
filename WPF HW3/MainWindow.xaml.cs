@@ -111,8 +111,20 @@ namespace WPF_HW3
             myMediaElement.LoadedBehavior = MediaState.Manual;
             TextBox textBox = sender as TextBox;
             MyLabelInfo info = labelInfos.FirstOrDefault(x => x.Name == textBox.Text);
+            string extension = System.IO.Path.GetExtension(info.Patch);
+
             if (info != null && File.Exists(info.Patch))
             {
+                if (extension == ".mp3" || extension == ".wav" || extension == ".wma" || extension == ".mid" || extension == ".midi")
+                {
+                    myImage.Visibility = Visibility.Visible;
+                    myImage.Source = new BitmapImage(new Uri("Images/image.jpg", UriKind.Relative));
+                }
+                else
+                {
+                    myImage.Visibility = Visibility.Collapsed;
+                    myImage.Source = null;
+                }
                 try
                 {
                     myMediaElement.Stop();
