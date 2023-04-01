@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <MediaElement x:Name="myMediaElement" Margin="0,25,0,5" Grid.RowSpan="2" Grid.ColumnSpan="4"  />
-        <Image x:Name="myImage" Grid.Row="1" Grid.ColumnSpan="4"></Image>
+        <Image x:Name="myImage" Grid.Row="1" Grid.ColumnSpan="4"/>
         <Menu Grid.Row="0" Grid.ColumnSpan="4" Margin="0,0,0,10">
             <MenuItem Header="File">
                 <MenuItem Header="Open" Click="MenuItem_Click"/>

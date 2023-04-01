@@ -1,21 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using static System.Net.Mime.MediaTypeNames;
-using System.IO;
-using System.Security.Cryptography;
-using System.Reflection.Emit;
 
 namespace WPF_HW3
 {
@@ -38,10 +29,12 @@ namespace WPF_HW3
 
             string extension = Path.GetExtension(ofd.FileName);
             if (ofd.FileName.EndsWith(".mp3") || ofd.FileName.EndsWith(".wav") || ofd.FileName.EndsWith(".wma")
-                || ofd.FileName.EndsWith(".mid") || ofd.FileName.EndsWith(".midi"))         
+                || ofd.FileName.EndsWith(".mid") || ofd.FileName.EndsWith(".midi"))
             {
                 myImage.Visibility = Visibility.Visible;
-                myImage.Source = new BitmapImage(new Uri(@"C:\Users\vtsyu\OneDrive\Робочий стіл\3zeynnx6ija.jpg"));
+                myImage.Source = new BitmapImage(new Uri("Images/image.jpg", UriKind.Relative));
+
+
 
             }
             else
