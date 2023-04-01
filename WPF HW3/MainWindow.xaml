@@ -1,0 +1,46 @@
+﻿<Window x:Class="WPF_HW3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_HW3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <MediaElement x:Name="myMediaElement" Margin="0,25,0,5" Grid.RowSpan="2" Grid.ColumnSpan="4"  />
+        <Image x:Name="myImage" Grid.Row="1" Grid.ColumnSpan="4"></Image>
+        <Menu Grid.Row="0" Grid.ColumnSpan="4" Margin="0,0,0,10">
+            <MenuItem Header="File">
+                <MenuItem Header="Open" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="RadioButtons">
+                <RadioButton x:Name="radiobutton1" Content="0.5" GroupName="FontSize" Tag="0.5" Click="RadioButton_Click" />
+                <RadioButton x:Name="radiobutton2" Content="1" GroupName="FontSize"  IsChecked="True" Tag="1"  Click="RadioButton_Click"/>
+                <RadioButton x:Name="radiobutton3" Content="1.25" GroupName="FontSize" Tag="1.25"  Click="RadioButton_Click"/>
+                <RadioButton x:Name="radiobutton4" Content="1.5" GroupName="FontSize" Tag="1.5"  Click="RadioButton_Click"/>
+                <RadioButton x:Name="radiobutton5" Content="1.75" GroupName="FontSize" Tag="1.75"  Click="RadioButton_Click"/>
+                <RadioButton x:Name="radiobutton6" Content="2" GroupName="FontSize" Tag="2"  Click="RadioButton_Click"/>
+            </MenuItem>
+        </Menu>
+        <Button Content="Play"  Grid.Row="2" Grid.Column="0" Click="Button_Click" />
+        <Button Content="Pause" Grid.Row="2" Grid.Column="1" Click="Button_Click" />
+        <Button Content="10 Up" Grid.Row="2" Grid.Column="2" Click="Button_Click" />
+        <Button Content="10 Low" Grid.Row="2" Grid.Column="3" Click="Button_Click" />
+        <Expander x:Name="myExpander" Grid.Column="4" Header="Video" >
+            <StackPanel>
+                <TextBox x:Name="Sosiska"></TextBox>
+            </StackPanel>
+        </Expander>
+    </Grid>
+</Window>
